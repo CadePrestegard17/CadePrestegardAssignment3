@@ -2,7 +2,225 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Hero Section -->
+<div class="jumbotron bg-primary text-white text-center" style="background: linear-gradient(135deg, #2780e3 0%, #1a5fb4 100%); border-radius: 10px; padding: 60px 20px; margin-bottom: 40px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
+    <h1 class="display-3 font-weight-bold">🎬 Movie Actor Hub</h1>
+    <p class="lead mt-3 mb-4">Your comprehensive platform for exploring movies, actors, and public sentiment analysis</p>
+    <hr class="my-4" style="border-color: rgba(255,255,255,0.3);">
+    <p class="mb-4">Discover movies, explore actor filmographies, and analyze Reddit sentiment with AI-powered insights</p>
+    <div>
+        <a asp-controller="Movies" asp-action="Index" class="btn btn-light btn-lg mr-3 mb-2">
+            <i class="fas fa-film"></i> Browse Movies
+        </a>
+        <a asp-controller="Actors" asp-action="Index" class="btn btn-outline-light btn-lg mb-2">
+            <i class="fas fa-users"></i> Browse Actors
+        </a>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="row mb-5">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2>✨ Platform Features</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Feature 1: Movie Database -->
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 detail-card">
+            <div class="card-body text-center">
+                <div style="font-size: 48px; color: #2780e3; margin-bottom: 20px;">
+                    🎥
+                </div>
+                <h4 class="card-title">Movie Database</h4>
+                <p class="card-text">
+                    Explore a comprehensive collection of movies with detailed information including:
+                </p>
+                <ul class="list-unstyled text-left">
+                    <li>📌 Movie titles and genres</li>
+                    <li>📅 Release years</li>
+                    <li>🎭 Cast and character names</li>
+                    <li>🖼️ Movie posters</li>
+                    <li>🔗 IMDB links</li>
+                </ul>
+                <a asp-controller="Movies" asp-action="Index" class="btn btn-primary mt-3">View Movies</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature 2: Actor Profiles -->
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 detail-card">
+            <div class="card-body text-center">
+                <div style="font-size: 48px; color: #2780e3; margin-bottom: 20px;">
+                    🎭
+                </div>
+                <h4 class="card-title">Actor Profiles</h4>
+                <p class="card-text">
+                    Browse detailed actor information and filmographies including:
+                </p>
+                <ul class="list-unstyled text-left">
+                    <li>👤 Actor names and photos</li>
+                    <li>📊 Age and demographics</li>
+                    <li>🎬 Complete filmography</li>
+                    <li>🎪 Character roles played</li>
+                    <li>🔗 IMDB profiles</li>
+                </ul>
+                <a asp-controller="Actors" asp-action="Index" class="btn btn-primary mt-3">View Actors</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature 3: AI Sentiment Analysis -->
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 detail-card">
+            <div class="card-body text-center">
+                <div style="font-size: 48px; color: #2780e3; margin-bottom: 20px;">
+                    🤖
+                </div>
+                <h4 class="card-title">AI Sentiment Analysis</h4>
+                <p class="card-text">
+                    Powered by cutting-edge AI to analyze public opinion:
+                </p>
+                <ul class="list-unstyled text-left">
+                    <li>💬 Reddit comment analysis</li>
+                    <li>🧠 HuggingFace DistilBERT (Movies)</li>
+                    <li>📈 VADER sentiment (Actors)</li>
+                    <li>📊 Overall sentiment scores</li>
+                    <li>🔍 Searchable comment tables</li>
+                </ul>
+                <a asp-controller="Movies" asp-action="Index" class="btn btn-primary mt-3">Try It Out</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Technology Stack Section -->
+<div class="row mt-5 mb-4">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2>🛠️ Technology Stack</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="detail-card">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-primary mb-3">Backend Technologies</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>ASP.NET Core 10</strong> - Modern web framework</li>
+                        <li class="list-group-item"><strong>Entity Framework Core</strong> - Data access layer</li>
+                        <li class="list-group-item"><strong>Azure SQL Database</strong> - Cloud database</li>
+                        <li class="list-group-item"><strong>HuggingFace API</strong> - DistilBERT sentiment model</li>
+                        <li class="list-group-item"><strong>VaderSharp2</strong> - VADER sentiment analysis</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-primary mb-3">Frontend Technologies</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Bootswatch 4 Cosmo</strong> - Professional UI theme</li>
+                        <li class="list-group-item"><strong>DataTables.net</strong> - Interactive tables</li>
+                        <li class="list-group-item"><strong>jQuery</strong> - JavaScript framework</li>
+                        <li class="list-group-item"><strong>Razor Pages</strong> - Server-side rendering</li>
+                        <li class="list-group-item"><strong>Custom CSS</strong> - Tailored styling</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- How It Works Section -->
+<div class="row mt-5 mb-4">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2>🔄 How It Works</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="sentiment-section">
+            <div class="row">
+                <div class="col-md-3 text-center mb-4">
+                    <div style="font-size: 64px; color: #2780e3;">1️⃣</div>
+                    <h5 class="mt-3">Browse Content</h5>
+                    <p>Explore movies and actors using searchable, sortable tables powered by DataTables</p>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div style="font-size: 64px; color: #2780e3;">2️⃣</div>
+                    <h5 class="mt-3">View Details</h5>
+                    <p>Click on any movie or actor to see comprehensive information, posters, and photos</p>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div style="font-size: 64px; color: #2780e3;">3️⃣</div>
+                    <h5 class="mt-3">Analyze Sentiment</h5>
+                    <p>View AI-powered sentiment analysis from 25 Reddit comments for each movie/actor</p>
+                </div>
+                <div class="col-md-3 text-center mb-4">
+                    <div style="font-size: 64px; color: #2780e3;">4️⃣</div>
+                    <h5 class="mt-3">Explore Links</h5>
+                    <p>Navigate between related movies and actors using cross-referenced links</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Stats Section -->
+<div class="row mt-5 mb-4">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2>📊 Database Statistics</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row text-center mb-5">
+    <div class="col-md-4 mb-4">
+        <div class="detail-card">
+            <div style="font-size: 48px; color: #2780e3; margin-bottom: 10px;">5</div>
+            <h3>Movies</h3>
+            <p class="text-muted">In our database</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="detail-card">
+            <div style="font-size: 48px; color: #2780e3; margin-bottom: 10px;">10</div>
+            <h3>Actors</h3>
+            <p class="text-muted">Featured performers</p>
+        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+        <div class="detail-card">
+            <div style="font-size: 48px; color: #2780e3; margin-bottom: 10px;">25</div>
+            <h3>Comments/Item</h3>
+            <p class="text-muted">Sentiment analyzed</p>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action -->
+<div class="row mb-5">
+    <div class="col-md-12">
+        <div class="detail-card text-center" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+            <h3 class="text-primary mb-4">Ready to Explore?</h3>
+            <p class="lead mb-4">Start discovering movies and actors with AI-powered sentiment insights</p>
+            <div>
+                <a asp-controller="Movies" asp-action="Index" class="btn btn-primary btn-lg mr-3 mb-2">
+                    🎬 Explore Movies
+                </a>
+                <a asp-controller="Actors" asp-action="Index" class="btn btn-primary btn-lg mb-2">
+                    🎭 Explore Actors
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
